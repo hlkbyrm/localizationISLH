@@ -40,7 +40,6 @@ private:
      ros::NodeHandle n;
 
      ros::Publisher localizationPosePublisher;
-
      //ros::Subscriber robotInfoSubscriber;
 
      //ros::Publisher neighborInfoPublisher;

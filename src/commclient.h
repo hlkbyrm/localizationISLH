@@ -9,6 +9,7 @@
 //#include <navigationISL/networkInfo.h>
 //#include <navigationISL/helpMessage.h>
 #include <QXmlStreamReader>
+#include <ros/timer.h>
 
 class RosThread;
 
@@ -53,8 +54,11 @@ private:
     QByteArray recDataBA;
 
     int robotID;
+    QString IP;
 
-    int readRobotID(QString filename);
+    int numOfRobots;
+
+    int readConfigFile(QString filename);
 
 signals:
     
