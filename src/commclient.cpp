@@ -83,7 +83,11 @@ void CommClient::receiveData(){
 
     // Convert to QString
     recData = QString::fromAscii(recDataBA);
-
+	
+	// If more than one message came than get only the last one
+    QStringList _list = recData.split("AA;",QString::SkipEmptyParts);
+	recData = "AA;" + _list.at(_list.count()-1);
+	
     // Split the data (Comma seperated format)
     QStringList list = recData.split(";",QString::SkipEmptyParts);
 
