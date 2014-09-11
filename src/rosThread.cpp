@@ -27,7 +27,7 @@ void RosThread::work(){
 
      emit rosStarted();
 
-     localizationPosePublisher = n.advertise<geometry_msgs::PoseArray>("pose_list", 1000);
+     localizationPosePublisher = n.advertise<geometry_msgs::PoseArray>("localizationISLH/pose_list", 1000);
 
     ros::Rate loop(30);
 
