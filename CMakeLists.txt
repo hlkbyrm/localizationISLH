@@ -7,6 +7,7 @@ project(localizationISLH)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  ISLH_msgs
 )
 
 ######################################################### FROM ROSBUILD
