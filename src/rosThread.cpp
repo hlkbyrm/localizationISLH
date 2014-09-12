@@ -1,10 +1,4 @@
 #include "rosThread.h"
-//#include <navigationISL/neighborInfo.h>
-//#include "commclient.h"
-
-#include <geometry_msgs/PoseArray.h>
-#include <geometry_msgs/Pose.h>
-
 
 RosThread::RosThread()
 {
@@ -27,7 +21,7 @@ void RosThread::work(){
 
      emit rosStarted();
 
-     localizationPosePublisher = n.advertise<geometry_msgs::PoseArray>("localizationISLH/pose_list", 1000);
+     localizationPosePublisher = n.advertise<ISLH_msgs::robotPositions>("localizationISLH/poseList", 1000);
 
     ros::Rate loop(30);
 
@@ -45,9 +39,6 @@ void RosThread::work(){
 void RosThread::shutdownROS()
 {
     ros::shutdown();
-   // shutdown = true;
-
-
 }
 
 
