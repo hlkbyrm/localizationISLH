@@ -84,7 +84,7 @@ void CommClient::receiveData(){
             robotPoseArray.directions.push_back(direction);
         }
 
-
+        //Note: 0. item in robotPoseArray is 1. Robot, 1. item .....
         this->rosthread->localizationPosePublisher.publish(robotPoseArray);
     }
 
