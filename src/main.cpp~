@@ -1,5 +1,5 @@
 
-// hlk byrm @ 2014
+// hlk byrm @ 2015
 
 #include "commclient.h"
 #include "rosThread.h"
@@ -11,7 +11,7 @@
 int main(int argc,char** argv)
 {
 
-    ros::init(argc,argv,"localizationISL");
+    ros::init(argc,argv,"localizationISLH");
 
 
     QApplication app(argc,argv);

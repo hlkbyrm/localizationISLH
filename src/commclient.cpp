@@ -68,9 +68,9 @@ void CommClient::receiveData(){
 
     ISLH_msgs::robotPositions robotPoseArray;
 
-    if(list.at(0) == "AA" && list.size()==(2+numOfRobots) )
+    if(list.at(0) == "AA" && list.size()==(1+numOfRobots) )
     {
-        for(int i = 2; i < list.size();i++){
+        for(int i = 1; i < list.size();i++){
 
             qDebug()<<list[i]<<" "<<i;
 
