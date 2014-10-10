@@ -76,6 +76,12 @@ void CommClient::receiveData(){
 
             QStringList valsList = list[i].split(",",QString::SkipEmptyParts);
             qDebug()<< valsList;
+            if(valsList.size() != 3){
+                qDebug() << "inconsistent message";
+                recData.clear();
+                recDataBA.clear();
+                return;
+            }
             geometry_msgs::Pose2D robotPose;
             robotPose.x = valsList.at(0).toFloat();
             robotPose.y = valsList.at(1).toFloat();
