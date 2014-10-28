@@ -22,9 +22,11 @@ public:
 
      friend class CommClient;
 
+     CommClient* commclient;
+
 private:
 
-     CommClient* commclient;
+
 
      bool shutdown;
 

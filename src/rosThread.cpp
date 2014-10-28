@@ -21,9 +21,9 @@ void RosThread::work(){
 
      emit rosStarted();
 
-     localizationPosePublisher = n.advertise<ISLH_msgs::robotPositions>("localizationISLH/poseList", 1000);
+     localizationPosePublisher = n.advertise<ISLH_msgs::robotPositions>("localizationISLH/poseList", 1);
 
-    ros::Rate loop(30);
+    ros::Rate loop(10);
 
     while(ros::ok()){
 

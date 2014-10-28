@@ -18,9 +18,13 @@ int main(int argc,char** argv)
 
     CommClient commclient;
 
-    RosThread* rosthread = new RosThread(&commclient);
+    RosThread* rosthread = new RosThread;
+
+  //  RosThread* rosthread = new RosThread(&commclient);
 
     commclient.rosthread = rosthread;
+
+    rosthread->commclient = &commclient;
 
     QThread thr;
 
